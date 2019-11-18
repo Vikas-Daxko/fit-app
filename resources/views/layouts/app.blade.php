@@ -51,12 +51,12 @@
                             @endif
                         @else
                             <li class="nav-item {{ (request()->is('users')) ? 'active' : '' }}" style="cursor:pointer;">
-                                <a class="nav-link">Users</a>
+                                <a href="{{ route('users') }}" class="nav-link">Users</a>
                             </li>
-                            <li class="nav-item" style="cursor:pointer;">
-                                <a class="nav-link">Meals</a>
+                            <li class="nav-item {{ (request()->is('meals')) ? 'active' : '' }}" style="cursor:pointer;">
+                                <a href="{{ route('meals') }}" class="nav-link">Meals</a>
                             </li>
-                            <li class="nav-item" style="cursor:pointer;">
+                            <li class="nav-item {{ (request()->is('products')) ? 'active' : '' }}" style="cursor:pointer;">
                                 <a class="nav-link">Products</a>
                             </li>
                             <li class="nav-item dropdown">
