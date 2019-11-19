@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- Styles -->
-<style>
-
-</style>
+<div class="container col-md-12" >
+ @include('partials.pageHeader', ['showHr' => true ,'isAdd' => true, 'linkName'=>'Add Meal', 'link' => '', 'name'=>'Meals'])
 <div class="row">
         <div class="col-sm-3">
          <div class="card mt-4" style="width: 18rem;">
@@ -51,13 +49,6 @@
                   </div>
             </div>
          </div>
-         <div class="col-sm-3 mt-4">
-               <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="http://files.softicons.com/download/toolbar-icons/flatastic-icons-part-1-by-custom-icon-design/png/256x256/add1.png" height="149" width="149" alt="Card image cap">
-                     <div class="card-body">
-                        <a href="#" class="btn btn-primary">Add Meals</a>
-                     </div>
-               </div>
-            </div>
      </div>
+   </div>
      @endsection
