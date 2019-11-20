@@ -23,3 +23,5 @@ Route::get('/meals', 'MealsController@index')->name('meals');
 Route::get('/trainer', 'UserController@getTrainer')->name('trainer');
 Route::get('/addMeals', 'MealsController@addMealPage')->name('addMeal');
 Route::post('/saveMeal', 'MealsController@saveMeal')->name('saveMeal');
+Route::get('/products', 'ProductController@index')->name('products');
+Route::get('/addproduct', 'ProductController@addProduct')->name('addProduct');
