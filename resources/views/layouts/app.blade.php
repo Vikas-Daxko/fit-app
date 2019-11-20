@@ -57,7 +57,7 @@
                                 <a href="{{ route('meals') }}" class="nav-link">Meals</a>
                             </li>
                             <li class="nav-item {{ (request()->is('products')) ? 'active' : '' }}" style="cursor:pointer;">
-                                <a class="nav-link">Products</a>
+                                <a href="{{ route('products') }}" class="nav-link">Products</a>
                             </li>
                             <li class="nav-item {{ (request()->is('trainer')) ? 'active' : '' }}" style="cursor:pointer;">
                                 <a class="nav-link">Trainer</a>
