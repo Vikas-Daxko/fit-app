@@ -41,4 +41,14 @@ class User extends Authenticatable
     {
         return ucfirst($name);
     }
+
+    public static function getUsers()
+    {
+        return self::where('role', 4)->get();
+    }
+
+    public static function getTrainers()
+    {
+        return self::where('role', 2)->get();
+    }
 }

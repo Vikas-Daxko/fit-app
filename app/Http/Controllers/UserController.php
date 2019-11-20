@@ -24,7 +24,17 @@ class UserController extends Controller
      */
     public function index()
     {
-        return view('userList', ['users' => User::all()]);
+        return view('userList', ['users' => User::getUsers()]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function getTrainer()
+    {
+        return view('trainerList', ['users' => User::getTrainers()]);
     }
 
     /**

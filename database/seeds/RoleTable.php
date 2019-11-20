@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class RoleTable extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('roles')->insert([
+            [
+                'name' => 'Admin'
+            ],
+            [
+                'name' => 'Trainer'
+            ],
+            [
+                'name' => 'Dietician'
+            ],
+            [
+                'name' => 'User'
+            ]
+        ]);
+    }
+}

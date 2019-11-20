@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container col-md-12" >
-    @include('partials.pageHeader', ['showHr' => false ,'isAdd' => false, 'linkName'=>'Users', 'link' => '', 'name'=> 'Users'])
+    @include('partials.pageHeader', ['showHr' => false ,'isAdd' => false, 'linkName'=>'Trainers', 'link' => '', 'name'=> 'Trainers'])
 <table class="table">
   <thead>
     <tr>
@@ -18,7 +18,7 @@
   @foreach ($users as $user)
     <tr>
     <th>{{$loop->iteration}}</th>
-      <th scope="row">USE{{$user->id}}</th>
+      <th scope="row">TRA{{$user->id}}</th>
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
       <td>
