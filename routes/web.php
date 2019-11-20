@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UserController@index')->name('home');
 Route::get('/users', 'UserController@index')->name('users');
-Route::get('/meals', function(){
-    return view('meals');
-})->name('meals');
+Route::get('/meals', 'MealsController@index')->name('meals');
+Route::get('/addMeals', 'MealsController@addMealPage')->name('addMeal');
+Route::post('/saveMeal', 'MealsController@saveMeal')->name('saveMeal');

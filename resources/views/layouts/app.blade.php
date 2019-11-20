@@ -59,6 +59,12 @@
                             <li class="nav-item {{ (request()->is('products')) ? 'active' : '' }}" style="cursor:pointer;">
                                 <a class="nav-link">Products</a>
                             </li>
+                            <li class="nav-item {{ (request()->is('trainer')) ? 'active' : '' }}" style="cursor:pointer;">
+                                <a class="nav-link">Trainer</a>
+                            </li>
+                            <li class="nav-item {{ (request()->is('dietician')) ? 'active' : '' }}" style="cursor:pointer;">
+                                <a class="nav-link">Dietician</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>

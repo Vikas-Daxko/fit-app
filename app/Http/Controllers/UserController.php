@@ -14,7 +14,7 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -25,5 +25,15 @@ class UserController extends Controller
     public function index()
     {
         return view('userList', ['users' => User::all()]);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function getUser($id)
+    {
+        return User::find($id);
     }
 }
