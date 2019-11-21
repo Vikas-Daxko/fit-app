@@ -5,7 +5,7 @@
 </div>
 @if($isAdd)
 <div class="col-sm-1">
-<a href="{{ route($link) }}"  class="" style="cursor:pointer;">{{ $linkName }}</a>
+<a href="{{ route($link, $id ?? '') }}"  class="" style="cursor:pointer;">{{ $linkName }}</a>
 </div>
 @endif
 </div>

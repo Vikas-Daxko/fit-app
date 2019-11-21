@@ -9,7 +9,7 @@
          <div class="card mt-4" style="width: 18rem;">
          <img class="card-img-top" style="object-fit:cover;" src="{{ asset($meal->image_url) }}" height="149" width="149" alt="Card image cap">
                <div class="card-body">
-                  <h5 class="card-title">{{ $meal->name }}</h5>
+               <h5 class="card-title"><a href="{{ route('recipes', $meal->id, true) }}">{{ $meal->name }}</a> </h5>
                   {{-- <p class="card-text">{{ $meal->decs }}</p> --}}
                </div>
          </div>
