@@ -15,13 +15,14 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
+	@include('flash-message')
+
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1mDLE37N5hjxHawhVQbnfdB6JgGyFVYdvae2tE4_WVdRg1pZwcg&s" height="42" width="42" alt="">
@@ -61,7 +62,7 @@
                                 <a href="{{ route('products') }}" class="nav-link">Products</a>
                             </li>
                             <li class="nav-item {{ (request()->is('trainer')) ? 'active' : '' }}" style="cursor:pointer;">
-                                <a href="{{ route('trainer') }}" class="nav-link">Trainer</a>
+                                <a class="nav-link">Trainer</a>
                             </li>
                             <li class="nav-item {{ (request()->is('dietician')) ? 'active' : '' }}" style="cursor:pointer;">
                                 <a class="nav-link">Dietician</a>
